@@ -6,7 +6,7 @@
  <a href="https://www.freepik.com/free-photo/close-up-businessman-with-digital-tablet_855036.htm#query=data&position=8&from_view=search&track=sph">Image by pressfoto</a> on Freepik
 </p>
 
-##Data Science na Prática 4.0
+## Data Science na Prática 4.0
 
 Repositório de arquivos e dados utilizados durante o curso Data Science na Prática 4.0.
 
