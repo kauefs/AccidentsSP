@@ -8,7 +8,7 @@
 
 ## Data Science na Prática 4.0
 
-Repositório de arquivos e dados utilizados durante o curso Data Science na Prática 4.0.
+Repositório de arquivos & dados utilizados durante o curso Data Science na Prática 4.0.
 
 [Projeto Completo](https://sigmoidal.ai)
 
