@@ -1,4 +1,8 @@
-[![author](https://img.shields.io/badge/Author-KAUE-red.svg)](https://www.linkedin.com/in/kauefs/) [![](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat)](https://github.com/kauefs/dnsp/issues)
+[![GitHub](https://img.shields.io/badge/GitHub-000000?logo=github&logoColor=white)](https://github.com/kauefs/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kauefs/)
+[![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-Apache_2.0-black.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat)](https://github.com/kauefs/dnsp/issues)
 
 <p align=center>
 <img src=https://img.freepik.com/free-photo/close-up-businessman-with-digital-tablet_1098-549.jpg alt='project related image'>
@@ -8,9 +12,7 @@
 
 ## Data Science na Prática 4.0
 
-Repositório de arquivos & dados utilizados durante o curso Data Science na Prática 4.0.
-
-[Projeto Completo](https://sigmoidal.ai)
+Repositório de alguns arquivos & dados utilizados durante o curso [Data Science na Prática 4.0](https://sigmoidal.ai/)
 
 **Links:**
 * [Medium](https://medium.com/@kauefs)
