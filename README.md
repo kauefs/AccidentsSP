@@ -18,4 +18,4 @@ Period: 2007 to 2020
 
 StreamLit InterActive DashBoard
 
-<p align=center><a href=https://accidentssp.streamlit.app><img alt=DashBoard src=https://github.com/kauefs/AccidentsSP/raw/%40/images/AccidentsSP.png width=75%></a></p>
+<p align=center><a href=https://accidentssp.streamlit.app><img alt=DashBoard src=https://github.com/kauefs/AccidentsSP/raw/%40/img/AccidentsSP.png width=75%></a></p>
