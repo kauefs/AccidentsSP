@@ -1,8 +1,10 @@
 pip
+ssl
 numpy
 pandas
 pydeck
 seaborn
 matplotlib
 folium
+streamlit
 streamlit_folium
