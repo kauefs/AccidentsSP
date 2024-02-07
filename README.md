@@ -1,20 +1,21 @@
+---
+# <center>Accidents in SP</center>
+
 [![GitHub](https://img.shields.io/badge/GitHub-000000?logo=github&logoColor=white)](https://github.com/kauefs/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kauefs/)
 [![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-black.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat)](https://github.com/kauefs/dnsp/issues)
 
-<p align=center>
-<img src=https://img.freepik.com/free-photo/close-up-businessman-with-digital-tablet_1098-549.jpg alt='project related image'>
- 
- Image by PressFoto on <a href='https://www.freepik.com/free-photo/close-up-businessman-with-digital-tablet_855036.htm#query=data&position=8&from_view=search&track=sph'>FreePik</a>
-</p>
+$$13\ December\ 2023$$
 
-## Data Science na Prática 4.0
+Tens of thousands of Brazilians loose their lives in the country roads every year.
 
-Repositório de alguns arquivos & dados utilizados durante o curso [Data Science na Prática 4.0](https://sigmoidal.ai/)
+## Data
 
-**Links:**
-* [Medium](https://medium.com/@kauefs)
-* [LinkedIn](https://www.linkedin.com/in/kauefs/)
-* [GitHub](https://github.com/kauefs)
+Period: 2007 to 2020
+
+## DashBoard
+
+StreamLit InterActive DashBoard
+
+<p align=center><a href=https://criminality.streamlit.app><img alt=DashBoard src=https://github.com/kauefs/AccidentsSP/raw/%40/images/AccidentsSP.png width=75%></a></p>
