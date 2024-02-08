@@ -1,5 +1,4 @@
 pip
-ssl
 numpy
 pandas
 pydeck
