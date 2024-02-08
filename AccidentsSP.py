@@ -3,9 +3,9 @@ import  pydeck   as pdk
 import streamlit as st
 import folium
 from   streamlit_folium import st_folium
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context # Disable SSL Certificate Verification
-url = 'https://github.com/'
+#import ssl
+#ssl._create_default_https_context = ssl._create_unverified_context # Disable SSL Certificate Verification
+#url = 'https://github.com/'
 st.set_page_config(page_title='SP', page_icon='💥')
 @st.cache_data
 def load_data():
