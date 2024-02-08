@@ -1,6 +1,6 @@
 pip
-setuptools
-ez_setup
+#setuptools
+#ez_setup
 numpy
 pandas
 pydeck
