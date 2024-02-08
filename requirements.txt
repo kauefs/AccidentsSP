@@ -1,4 +1,7 @@
 pip
+ssl
+setuptools
+ez_setup
 numpy
 pandas
 pydeck
