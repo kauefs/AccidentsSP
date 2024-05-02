@@ -60,6 +60,7 @@ st.divider(                    )
 st.markdown('''
 Tens of thousands of Brazilians loose their lives in the country roads every year.
             ''')
+st.divider(    )
 if   D3.checkbox( '3D', value=True):
      st.subheader('3D MAP')
      st.pydeck_chart(pdk.Deck(initial_view_state=pdk.ViewState(longitude=-47.00,
