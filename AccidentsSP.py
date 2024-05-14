@@ -33,6 +33,7 @@ df          = load_data()
 df['date']  = pd.to_datetime(df['date'])
 accidents   = df['date'].dt.year.value_counts().sort_index()
 # SIDE:
+st.sidebar.title(   'ƊⱭȾɅViƧi🧿Ƞ')
 st.sidebar.markdown('''
 [![GitHub](  https://img.shields.io/badge/-000000?logo=github&logoColor=FFFFFF)](                                 https://github.com/kauefs/)
 [![Medium](  https://img.shields.io/badge/-000000?logo=medium&logoColor=FFFFFF)](                                 https://medium.com/@kauefs)
@@ -40,7 +41,6 @@ st.sidebar.markdown('''
 [![Python](  https://img.shields.io/badge/-3-4584B6?logo=python&logoColor=FFDE57&labelColor=4584B6&color=646464)](https://www.python.org/)
 [![License]( https://img.shields.io/github/license/kauefs/StreamLit?style=flat&logo=apache&logoColor=CB2138&label=License&labelColor=6D6E71&color=D22128)](https://www.apache.org/licenses/LICENSE-2.0)
             ''')
-st.sidebar.text( '13 December 2023')
 st.sidebar.divider(                )
 st.sidebar.title('DashBoard'       )
 st.sidebar.bar_chart(accidents, height=200,  color='#00BFFF')
@@ -52,7 +52,7 @@ FilteredDF  = df[(df.date.dt.year == ano)]
 st.sidebar.info( ' {} Accidents'.format(FilteredDF.shape[0]))
 table       = st.sidebar.empty()
 st.sidebar.divider(            )
-st.sidebar.markdown('''©2023™ [ƊⱭȾɅViƧi🧿Ƞ](https://datavision.one/)''')
+st.sidebar.markdown('''2023.12.13 &copy; 2024 [ƊⱭȾɅViƧi🧿Ƞ](https://datavision.one/) &trade;''')
 # MAIN:
 st.divider(                    )
 st.title(     'Accidents in SP')
