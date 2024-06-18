@@ -36,7 +36,7 @@ accidents   = df['date'].dt.year.value_counts().sort_index()
 st.sidebar.title(  'ƊⱭȾɅViƧi🧿Ƞ')
 st.sidebar.divider(              )
 st.sidebar.title(  'DashBoard'   )
-st.sidebar.bar_chart(accidents, height=200,  color='#00BFFF')
+st.sidebar.bar_chart(accidents, color='#00BFFF', height=200)
 st.sidebar.write('Map Options:')
 D3          = st.sidebar.empty()
 D2          = st.sidebar.empty()
@@ -97,7 +97,7 @@ if   D3.checkbox( '3D', value=True):
 if   D2.checkbox( '2D', value=False):
      st.subheader('2D MAP')
      SP    =folium.Map(location=[-23.259505,-47.0628577], zoom_start=6.75,
-                     tiles='OpenStreetMap',        prefer_canvas=True)
+                      tiles='OpenStreetMap',           prefer_canvas=True)
      map   = df.sample(frac=.025, random_state=0)
      map.dropna(subset = ['lat', 'lon'], inplace=True)
      lat   = map['lat'].values
