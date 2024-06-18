@@ -128,4 +128,4 @@ if   table.checkbox('DataFrame', value=True):
      st.markdown(f'''➡️ Showing {'**{}** accidents'.format(FilteredDF.shape[0])} in **{ano}**:''')
      st.write(FilteredDF)
      st.divider(        )
-st.toast('Accident!', icon='💥')
+#st.toast('Accident!', icon='💥')
