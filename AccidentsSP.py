@@ -36,7 +36,7 @@ accidents   = df['date'].dt.year.value_counts().sort_index()
 st.sidebar.title(  'ƊⱭȾɅViƧi🧿Ƞ')
 st.sidebar.divider(              )
 st.sidebar.title(  'DashBoard'   )
-st.sidebar.bar_chart(accidents, color='#00BFFF', height=200)
+st.sidebar.bar_chart(accidents, height=200)#color='#00BFFF'
 st.sidebar.write('Map Options:')
 D3          = st.sidebar.empty()
 D2          = st.sidebar.empty()
