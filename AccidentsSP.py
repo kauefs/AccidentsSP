@@ -33,7 +33,7 @@ df          = load_data()
 df['date']  = pd.to_datetime(df['date'])
 accidents   = df['date'].dt.year.value_counts().sort_index()
 # SIDE:
-st.sidebar.title(  'ƊⱭȾɅViƧi🧿Ƞ')
+st.sidebar.title(  'ƊⱭȾɅViƧi🧿Ƞ&trade;')
 st.sidebar.divider(              )
 st.sidebar.title(  'DashBoard'   )
 st.sidebar.bar_chart(accidents, height=200)#color='#00BFFF'
