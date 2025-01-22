@@ -1,6 +1,6 @@
-import  pydeck   as pdk
-import  pandas   as pd
-import streamlit as st
+import streamlit          as   st
+import  pandas            as   pd
+import  pydeck            as   pdk
 import           folium
 from   streamlit_folium import st_folium
 st.set_page_config(page_title='SP', page_icon='💥', layout='wide', initial_sidebar_state='expanded')
