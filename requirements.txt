@@ -1,11 +1,12 @@
 pip
 #setuptools
 #ez_setup
+certifi
 numpy
 pandas
 pydeck
 seaborn
 matplotlib
 folium
-streamlit
+streamlit<1.42.0
 streamlit_folium
