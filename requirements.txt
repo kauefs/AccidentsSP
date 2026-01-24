@@ -6,7 +6,8 @@ numpy
 pandas
 pydeck
 seaborn
+altair<5
 matplotlib
 folium
-streamlit==1.41.0
+streamlit>1.49.0
 streamlit_folium
