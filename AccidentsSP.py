@@ -6,9 +6,9 @@ from   streamlit_folium import st_folium
 st.set_page_config(page_title='SP', page_icon='💥', layout='wide', initial_sidebar_state='expanded')
 # DATA:
 @st.cache_data
-def load_data():
+def load_data( ):
     df      = pd.read_csv('https://github.com/kauefs/dsnp/raw/@/datasets/AcidentesSP.csv')
-    columns = {
+    columns ={
             'Data do Acidente'                :'date',
             'Hora do Acidente'                :'time',
             'Tipo de via'                     :'road',
@@ -25,26 +25,26 @@ def load_data():
             'Tempo entre o Acidente e o óbito':'TimeToDie',
             'Outro Veículo Envolvido'         :'AnotherVehicle',
             }
-    df = df.rename(columns, axis=1)
-    df = df[list(columns.values())]
-    df.dropna(subset = ['lat', 'lon'], inplace=True)
-    return df
-df          = load_data()
-df['date']  = pd.to_datetime(df['date'])
-accidents   = df['date'].dt.year.value_counts().sort_index()
+    df=df.rename(columns, axis=1)
+    df=df[list(columns.values())]
+    df.dropna(subset=['lat','lon'], inplace=True)
+    df['date']=pd.to_datetime(df['date'])
+    return   df
+df          =load_data( )
+accidents   =df['date'].dt.year.value_counts( ).sort_index( )
 # SIDE:
 st.sidebar.title    ('ƊⱭȾɅViƧi🧿Ƞ&trade;')
 st.sidebar.divider  (                     )
 st.sidebar.title    ('DashBoard'          )
 st.sidebar.bar_chart(accidents, height=200)#color='#00BFFF'
 st.sidebar.write    ('Map Options:'       )
-D3          = st.sidebar.empty()
-D2          = st.sidebar.empty()
-ano         = st.sidebar.slider('Year:',    2007, 2020, 2015)
-FilteredDF  = df[(df.date.dt.year == ano)]
+D3          =st.sidebar.empty ( )
+D2          =st.sidebar.empty ( )
+ano         =st.sidebar.slider('Year:',2007,2020,2015)
+FilteredDF  =df[(df.date.dt.year==ano)]
 st.sidebar.info    ( ' {} Accidents'.format(FilteredDF.shape[0]))
-table       = st.sidebar.empty()
-st.sidebar.divider (           )
+table       =st.sidebar.empty ( )
+st.sidebar.divider (            )
 st.sidebar.markdown('''
 ![2023.12.13   ](https://img.shields.io/badge/2023.12.13-000000)
 
@@ -58,14 +58,14 @@ st.sidebar.markdown('''
 [![ƊⱭȾɅViƧi🧿Ƞ](https://img.shields.io/badge/ƊⱭȾɅViƧi🧿Ƞ&trade;-0065FF?style=plastic&logoColor=0065FF&label=&copy;2023&labelColor=0065FF)](https://datavision.one/)
                     ''')
 # MAIN:
-st.divider(                    )
-st.title(     'Accidents in SP')
-st.divider(                    )
+st.divider (                   )
+st.title   (  'Accidents in SP')
+st.divider (                   )
 st.markdown('''
 Tens of thousands of Brazilians loose their lives in the country's roads every year.
             ''')
 st.divider(    )
-if   D3.checkbox( '3D', value=True):
+if   D3.checkbox ('3D', value=True):
      st.subheader('3D MAP')
      st.pydeck_chart(pdk.Deck(initial_view_state=pdk.ViewState(longitude=-47.00,
                                                                latitude =-23.23,
@@ -83,8 +83,8 @@ if   D3.checkbox( '3D', value=True):
                                             pickable=True,
                                             extruded=True,
                                             coverage=1)],
-                                          views=[{'@@type':'MapView', 'controller':True}],
-                                          map_style   ='dark',
+                                         #views=[{'@@type':'MapView','controller':True}],
+                                          map_style   ='mapbox://styles/mapbox/dark-v9',
                                           api_keys    = None ,
                                           width       ='100%',
                                           height      = 500  ,
@@ -92,21 +92,20 @@ if   D3.checkbox( '3D', value=True):
                                           description ='Accidents in SP',
                                           effects     = None ,
                                           map_provider='carto',
-                                          parameters  = None))
+                                          parameters  = None), use_container_width=True)
      st.divider  (                 )
 if   D2.checkbox ('2D', value=False):
      st.subheader('2D MAP'         )
-     SP    =folium.Map(location=[-23.259505,-47.0628577], zoom_start=6.75,
-                      tiles='OpenStreetMap',           prefer_canvas=True)
-     map   = df.sample(frac=.025, random_state=0)
-     map.dropna(subset = ['lat', 'lon'], inplace=True)
-     lat   = map['lat'].values
-     lon   = map['lon'].values
-     veh   = map['vehicle']
-     for lat, lon, veh in zip(lat, lon, veh):
-          folium.Marker(location=[lat, lon], popup=veh,
-                        icon=folium.Icon(color='red', icon='car-burst', prefix='fa')).add_to(SP)
-     st_folium(SP)
+     SP    =folium.Map(location=[-23.259505,-47.0628577], zoom_start=6.75, tiles='OpenStreetMap', prefer_canvas=True)
+     size  =min(len(FilteredDF), 400)
+     sample=FilteredDF.sample(n=size, random_state=0)if len(FilteredDF) > 0 else FilteredDF
+    #map   =df.sample (frac=.025, random_state=  0 )
+    #map.dropna(subset=['lat','lon'],  inplace=True)
+     lats  =sample[  'lat'  ].values
+     lons  =sample[  'lon'  ].values
+     vehs  =sample['vehicle'].values
+     for lat, lon, veh in zip(lats, lons, vehs):folium.Marker(location=[lat, lon], popup=veh, icon=folium.Icon(color='red', icon='car-burst', prefix='fa')).add_to(SP)
+     st_folium(SP, width='100%', height=500)
      st.divider( )
 #     SP    =folium.Map(location=[-23.259505,-47.0628577], zoom_start=6.75,  # noqa: E999
 #                     tiles='CartoDB Positron',     prefer_canvas=True)
@@ -126,6 +125,6 @@ if   D2.checkbox ('2D', value=False):
 if   table.checkbox(  'DataFrame', value=True):
      st.subheader  (  'DATA')
      st.markdown   (f'''➡️ Showing {'**{}** accidents'.format(FilteredDF.shape[0])} in **{ano}**:''')
-     st.write      (FilteredDF)
+     st.dataframe  (FilteredDF, use_container_width=True)
      st.divider    (          )
 #st.toast('Accident!', icon='💥')
