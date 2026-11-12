@@ -9,5 +9,7 @@ seaborn
 altair<5
 matplotlib
 folium
-streamlit>1.49.0
-streamlit_folium
+streamlit
+streamlet_folium
+#starlette<0.47.0
+#uvicorn<0.35.0
